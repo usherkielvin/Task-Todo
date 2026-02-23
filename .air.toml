@@ -1,0 +1,9 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+entrypoint = "./tmp/main.exe" # Windows executable
+cmd = "go build -o ./tmp/main.exe main.go"
+exclude = ["tmp/*", "client/*"]
+include = ["**/*.go"]
+ignore = ["tmp/*"]
