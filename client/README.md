@@ -71,3 +71,76 @@ export default defineConfig([
   },
 ])
 ```
+
+---
+
+# Go React Daily Tasks
+
+A modern web application for managing daily tasks, built with React, Chakra UI, and Go (Fiber).
+
+## Tech Stack
+
+- **Frontend:**
+  - React (Vite)
+  - TypeScript
+  - Chakra UI (for styling and theming)
+  - React Query (for data fetching)
+
+- **Backend:**
+  - Go (Fiber web framework)
+  - MongoDB (database)
+
+## Features
+
+- Light/Dark mode toggle
+- Add, update, and delete daily tasks
+- Task status badges (In Progress, Done)
+- Responsive design
+- Clean, modern UI
+
+## Project Structure
+
+```
+GO Module/
+├── go.mod
+├── main.go
+├── client/
+│   ├── index.html
+│   ├── package.json
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   ├── components/
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── TodoItem.tsx
+│   │   │   ├── TodoList.tsx
+│   │   │   ├── TodoForm.tsx
+│   │   ├── chakra/
+│   │   │   ├── theme.ts
+│   ├── vite.config.ts
+│   ├── public/
+│   │   ├── react.png
+│   │   ├── go.png
+│   │   ├── ...
+├── tmp/
+```
+
+## How to Run
+
+1. **Backend:**
+   - Install Go and MongoDB
+   - Run `go run main.go` in the root directory
+
+2. **Frontend:**
+   - Navigate to `client/`
+   - Run `npm install` to install dependencies
+   - Run `npm run dev` for development or `npm run build` for production
+
+## Screenshots
+
+- Light and dark mode UI
+- Task management features
+
+## License
+
+MIT
