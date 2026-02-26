@@ -1,4 +1,4 @@
-import { Badge, Box, Flex, Spinner, Text } from "@chakra-ui/react";
+import { Badge, Box, Flex, Spinner, Text, useColorModeValue } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import type { Todo } from "./TodoList";
@@ -63,7 +63,9 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
 				justifyContent={"space-between"}
 			>
 				<Text
-					color={todo.completed ? "green.200" : "yellow.100"}
+					color={todo.completed
+						? useColorModeValue("green.600", "green.200")
+						: useColorModeValue("#444", "yellow.100")}
 					textDecoration={todo.completed ? "line-through" : "none"}
 				>
 					{todo.body}
@@ -74,7 +76,12 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
 					</Badge>
 				)}
 				{!todo.completed && (
-					<Badge ml='1' colorScheme='yellow'>
+					<Badge
+						ml='1'
+						colorScheme='yellow'
+						bg={useColorModeValue("yellow.300", undefined)}
+						color={useColorModeValue("#222", undefined)}
+					>
 						In Progress
 					</Badge>
 				)}

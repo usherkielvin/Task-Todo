@@ -16,11 +16,9 @@ export default function Navbar() {
 						gap={3}
 						display={{ base: "none", sm: "flex" }}
 					>
-						<img src='/react.png' alt='logo' width={50} height={50} />
-						<Text fontSize={"40"}>+</Text>
-						<img src='/go.png' alt='logo' width={40} height={40} />
-						<Text fontSize={"40"}>=</Text>
-						<img src='/explode.png' alt='logo' width={50} height={50} />
+						<Text fontSize={"2xl"} fontWeight={700} color={useColorModeValue("#222", "white")}>Go React</Text>
+						<img src='/react.png' alt='React logo' width={40} height={40} />
+						<img src='/go.png' alt='Go logo' width={40} height={40} />
 					</Flex>
 
 					{/* RIGHT SIDE */}
