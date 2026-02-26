@@ -1,22 +1,20 @@
+import { Container, Stack } from '@chakra-ui/react';
+import Navbar from './components/Navbar';
+import TodoForm from './components/Todoform';
+import TodoList from './components/TodoList';
 
-
-import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react';
+export const BASE_URL = "http://localhost:5000/api";
 
 function App() {
   return (
-    <Container maxW="lg" centerContent py={24}>
-      <VStack spacing={8}>
-        <Heading as="h1" size="2xl" textAlign="center">
-          Welcome to My Landing Page
-        </Heading>
-        <Text fontSize="xl" color="gray.600" textAlign="center">
-          This is a simple and modern landing page built with React and Chakra UI.
-        </Text>
-        <Button colorScheme="teal" size="lg">
-          Get Started
-        </Button>
-      </VStack>
+    <Stack h ="100vh">
+    <Navbar />
+    <Container>
+    <TodoForm />
+  
+    <TodoList />
     </Container>
+    </Stack>
   );
 }
 
